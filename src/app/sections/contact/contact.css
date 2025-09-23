@@ -1,0 +1,55 @@
+/* Animation for entry */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-slide-in {
+  animation: fadeSlideIn 0.6s ease-out;
+}
+
+/* Contact section styles */
+.contact {
+  max-width: 700px;
+  margin: 15rem auto;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact-title {
+  color: var(--theme-color);
+  font-size: var(--tbase);
+  font-weight: 300;
+}
+.contact-title::before {
+  content: "03.";
+  margin-right: 0.5rem;
+  color: var(--theme-color);
+}
+.contact-sub-title {
+  font-size: var(--tgiant);
+  color: var(--light-slate);
+}
+.contact-text {
+  color: var(--slate);
+  font-size: var(--tlarge);
+  letter-spacing: 0.07rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+}
+.contact-cta {
+  margin-top: 1rem;
+}
+.contact-cta .btn {
+  padding: 1rem 2rem;
+  display: inline-block; /* Ensure the padding and sizing work correctly */
+}
