@@ -1,0 +1,77 @@
+.email {
+  position: fixed;
+  right: 4rem;  
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.email-link {
+  text-decoration: none;
+  letter-spacing: 0.1em; 
+  padding: 10px;
+  writing-mode: vertical-rl;
+  color: var(--light-slate);
+  font-size: var(--tsm2);
+  outline: 2px dashed transparent;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.email-link:hover {
+  transform: translateY(-4px);
+  color: var(--theme-color);
+}
+
+.email-link:focus {
+  transform: translateY(-4px);
+  outline-color: var(--theme-color);
+  color: var(--theme-color);
+  outline-offset: 2px;
+}
+
+.email-link:last-child {
+  margin-bottom: 2rem;
+}
+
+.email::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 90px;
+  background-color: var(--light-slate);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1080px) {
+  .email {
+    left: 2rem;
+    right: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .email {
+    display: none;
+  }
+}
+
+/* Define the starting and ending points of the animation */
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the keyframe animation to the class */
+.fade-in {
+  animation: fadeInAnimation 0.3s ease-in-out;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}

@@ -1,1 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app/styles/_globals.css";
+@import "./app/styles/_variables.css";
+@import "./app/styles//_main.css";

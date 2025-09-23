@@ -1,0 +1,17 @@
+#logo {
+    height: 100%;
+    width: 100%;
+    fill: none;
+}
+
+#logoH{
+  stroke-width: 0.7;
+  stroke: var(--theme-color);
+  fill: var(--background-color);
+  transform: scale(1);
+}
+
+#logoS{
+    fill: var(--theme-color);
+    transform: scale(1);
+}

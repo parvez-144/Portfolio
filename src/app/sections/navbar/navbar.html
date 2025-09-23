@@ -1,0 +1,58 @@
+<nav>
+  <div class="wrapper" [ngClass]="{'blur-nav': navbarVisible}">
+    <div
+      class="brand"
+      [attr.initial]="{opacity: 0}"
+      [attr.animate]="{opacity: 1}"
+      [attr.transition]="{duration: 0.3, ease: 'easeInOut'}"
+    >
+      <a routerLink="/">
+        <app-logo></app-logo>
+      </a>
+    </div>
+
+    <div
+      class="nav-responsive-toggle"
+      [attr.initial]="{opacity: 0}"
+      [attr.animate]="{opacity: 1}"
+      [attr.transition]="{duration: 0.3, ease: 'easeInOut'}"
+    >
+      <button (click)="toggleResponsiveNav()">
+        <svg *ngIf="responsiveNavVisible; else menuIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x">
+          <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+        </svg>
+        <ng-template #menuIcon>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+            <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
+          </svg>
+        </ng-template>
+      </button>
+    </div>
+
+    <div
+      class="nav-items"
+      [ngClass]="{'nav-responsive': responsiveNavVisible}"
+    >
+      <ul class="nav-items-list">
+        <li *ngFor="let link of sectionLinks; let i = index" class="nav-items-list-item"
+          (click)="closeResponsiveNav()"
+          [attr.initial]="{opacity: 0, y: -25}"
+          [attr.animate]="{opacity: 1, y: 0}"
+          [attr.transition]="{duration: 0.3, ease: 'easeInOut', delay: 0.3 + i * 0.1}"
+        >
+          <a [href]="link.link" class="nav-items-list-item-link">
+            {{ link.name }}
+          </a>
+        </li>
+      </ul>
+      <div
+        class="nav-items-button"
+        [attr.initial]="{opacity: 0, y: -25}"
+        [attr.animate]="{opacity: 1, y: 0}"
+        [attr.transition]="{duration: 0.3, ease: 'easeInOut', delay: 0.6}"
+      >
+        <app-button text="Resume" link="/parvez_resume_SoftwareEngineer_2025.pdf"></app-button>
+      </div>
+    </div>
+  </div>
+</nav>

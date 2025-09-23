@@ -1,0 +1,41 @@
+.loader-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hexagon {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  stroke-width: 0.5;
+  stroke: var(--theme-color);
+  animation: 3s ease-in forwards logo-load;
+  fill: var(--background-color);
+  transform: scale(0.8);
+}
+
+#S {
+  animation: 3s ease-in forwards logo;
+  fill: var(--background-color);
+  transform: scale(0.8);
+}
+
+@keyframes logo-load {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes logo {
+  0% {
+    fill: var(--background-color);
+  }
+  100% {
+    fill: var(--theme-color);
+  }
+}
