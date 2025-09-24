@@ -12,7 +12,8 @@ import { RouterLink } from '@angular/router';
 export class Navbar {
  sectionLinks = [
     { name: 'About', link: '#about' },
-    { name: 'Project', link: '#project' },
+    { name: 'Experience', link: '#experience' },
+    { name: 'Projects', link: '#projects' },
     { name: 'Contact', link: '#contact' },
   ];
 

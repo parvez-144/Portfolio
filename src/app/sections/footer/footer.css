@@ -1,0 +1,25 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-links-icon:hover {
+  transform: translateY(-5px);
+}
+
+.footer-links-icon a {
+  color: var(--light-slate); /* Or your preferred color variable */
+  text-decoration: none;
+}

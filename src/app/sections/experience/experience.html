@@ -1,0 +1,45 @@
+<div class='experience' id='experience'>
+  <div class="title">
+    <h2>Where I've Worked</h2>
+  </div>
+  <div class="container">
+    <ul class="exp-slider">
+      <div 
+        class="underline"
+        [style.top]="selected * 2.5 + 'rem'"
+      ></div>
+      @for (exp of experiences; track exp; let index = $index) {
+        <li
+          [ngClass]="{ 'exp-slider-item-selected': index === selected }"
+          class="exp-slider-item"
+          (click)="selected = index"
+        >
+          <span>{{ exp.name }}</span>
+        </li>
+      }
+    </ul>
+    <div class="exp-details">
+      <div class="exp-details-position">
+        <h3>
+          <span>{{ experiences[selected].role }}</span>
+          <span> @ </span>
+          <span class='exp-details-position-company'>
+            <a class='link' target='_blank' [href]="experiences[selected].url">
+              {{ experiences[selected].url }}
+            </a>
+          </span>
+        </h3>
+        <p class="exp-details-range">
+          {{ experiences[selected].start }} - {{ experiences[selected].end }}
+        </p>
+        <ul class="exp-details-list">
+          @for (desc of experiences[selected].shortDescription; track desc) {
+            <li class='exp-details-list-item'>
+              {{ desc }}
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -6,10 +6,13 @@ import { SocialIcons } from './components/social-icons/social-icons';
 import { Email } from './components/email/email';
 import { About } from './sections/about/about';
 import { Contact } from './sections/contact/contact';
+import { Projects } from './sections/projects/projects';
+import { Experience } from './sections/experience/experience';
+import { Footer } from './sections/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Navbar,Hero,SocialIcons,Email,About,Contact],
+  imports: [RouterOutlet,Navbar,Hero,SocialIcons,Email,About,Contact,Projects,Experience,Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
