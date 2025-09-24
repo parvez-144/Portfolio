@@ -20,6 +20,6 @@
 }
 
 .footer-links-icon a {
-  color: var(--light-slate); /* Or your preferred color variable */
+  color: var(--light-slate); 
   text-decoration: none;
 }
