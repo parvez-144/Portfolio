@@ -1,13 +1,16 @@
-<app-navbar></app-navbar>
-<main>
-
-  <app-hero></app-hero>
-  <app-about></app-about>
-  <app-experience></app-experience>
-  <app-projects></app-projects>
-  <app-contact></app-contact>
-  <app-footer></app-footer>
-</main>
-<app-social-icons></app-social-icons>
-<app-email></app-email>
-
+<div *ngIf="isLoading(); else showContent">
+  <app-loader></app-loader>
+</div>
+<ng-template #showContent>
+  <app-navbar></app-navbar>
+  <main>
+    <app-hero></app-hero>
+    <app-about></app-about>
+    <app-experience></app-experience>
+    <app-projects></app-projects>
+    <app-contact></app-contact>
+    <app-footer></app-footer>
+  </main>
+  <app-social-icons></app-social-icons>
+  <app-email></app-email>
+</ng-template>
